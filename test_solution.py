@@ -29,12 +29,6 @@ class TestMinInterval(unittest.TestCase):
         expected = [-1, -1]
         self.assertEqual(self.solution.minInterval(intervals, queries), expected)
 
-    def test_large_intervals(self):
-        intervals = [[1, 10], [5, 15], [20, 30]]
-        queries = [1, 5, 10, 25]
-        expected = [10, 5, 5, 10]
-        self.assertEqual(self.solution.minInterval(intervals, queries), expected)
-
     def test_identical_intervals(self):
         intervals = [[1, 10], [1, 10], [1, 10]]
         queries = [1, 5, 10]
@@ -45,12 +39,6 @@ class TestMinInterval(unittest.TestCase):
         intervals = [[1, 3], [2, 5], [4, 7]]
         queries = [8]
         expected = [-1]
-        self.assertEqual(self.solution.minInterval(intervals, queries), expected)
-
-    def test_multiple_queries(self):
-        intervals = [[1, 2], [2, 4], [3, 5]]
-        queries = [1, 2, 3, 4, 5]
-        expected = [2, 2, 2, 2, 3]
         self.assertEqual(self.solution.minInterval(intervals, queries), expected)
 
 if __name__ == "__main__":
